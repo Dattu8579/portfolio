@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+
+    <!-- Custom CSS -->
+    <style>
+        a{
+            text-decoration: none;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            cursor: pointer;
+          }
+        .project-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-container img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .project-container:hover img {
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: white;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
+        }
+
+        .project-container:hover .project-overlay {
+            opacity: 1;
+            visibility: visible;
+            top: 0; /* Move the text from bottom to top */
+        }
+
+        .project-overlay h5 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-overlay p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">CodeBy<span class="text-warning">Dattu</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Header Section -->
+    <header class="text-center py-5" data-aos="fade-down">
+        <div class="container">
+            <h1>Welcome to <span>CodeBy</span><span class="text-warning">Dattu</span></h1>
+            <p class="lead">I'm a Full Stack Developer passionate about creating interactive web experiences.</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm Dattu, a passionate and dedicated Full Stack Developer with expertise in creating dynamic, responsive, and user-friendly websites. I possess a strong background in both front-end and back-end development, enabling me to design and implement seamless web solutions that cater to diverse user needs. My skill set includes proficiency in Python, Django, Flask, JavaScript, HTML, CSS, and various modern frameworks and tools, allowing me to deliver high-quality, scalable applications.</p>
+                    <p>I thrive on solving complex problems through innovative coding practices and enjoy turning ideas into reality by building efficient, maintainable, and visually appealing web applications. With a commitment to continuous learning and staying updated with the latest industry trends, I aim to contribute to impactful projects and drive meaningful digital transformation. My strong communication, problem-solving, and adaptability skills further enhance my ability to collaborate effectively in team environments and deliver exceptional results.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://img.freepik.com/premium-photo/realistic-3d-animated-character-with-glasses-khaki-pants_899449-591685.jpg?w=826" alt="About Me" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+<section id="skills" class="bg-light py-5" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-5">Skills</h2>
+        <div class="row text-center mb-5">
+            <div class="col-md-4">
+                <div class="card shadow-sm p-4 border-0" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
+                    <h4 class="fw-bold">Programming Languages</h4>
+                    <p class="text-muted">Python, JavaScript, HTML, CSS</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm p-4 border-0" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="bi bi-braces display-4 text-success mb-3"></i>
+                    <h4 class="fw-bold">Frameworks & Libraries</h4>
+                    <p class="text-muted">Django, Flask, Bootstrap</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm p-4 border-0" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="bi bi-bar-chart display-4 text-danger mb-3"></i>
+                    <h4 class="fw-bold">Data Analysis & Visualization</h4>
+                    <p class="text-muted">Pandas, NumPy, Matplotlib</p>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center mb-5">
+            <div class="col-md-4">
+                <div class="card shadow-sm p-4 border-0" data-aos="fade-up" data-aos-delay="400">
+                    <i class="bi bi-database display-4 text-info mb-3"></i>
+                    <h4 class="fw-bold">Database Management</h4>
+                    <p class="text-muted">MySQL</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm p-4 border-0" data-aos="fade-up" data-aos-delay="500">
+                    <i class="bi bi-cloud-upload display-4 text-warning mb-3"></i>
+                    <h4 class="fw-bold">Version Control</h4>
+                    <p class="text-muted">Git, GitHub</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm p-4 border-0" data-aos="fade-up" data-aos-delay="600">
+                    <i class="bi bi-globe display-4 text-secondary mb-3"></i>
+                    <h4 class="fw-bold">API Integration</h4>
+                    <p class="text-muted">REST APIs</p>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-center mt-5">Soft Skills</h2>
+        <div class="row text-center mt-4">
+            <div class="col-md-3">
+                <div class="card shadow-sm p-4 border-0" data-aos="flip-left" data-aos-delay="100">
+                    <i class="bi bi-chat-dots display-4 text-primary mb-3"></i>
+                    <h4 class="fw-bold">Communication</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm p-4 border-0" data-aos="flip-left" data-aos-delay="200">
+                    <i class="bi bi-lightbulb display-4 text-success mb-3"></i>
+                    <h4 class="fw-bold">Problem-Solving</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm p-4 border-0" data-aos="flip-left" data-aos-delay="300">
+                    <i class="bi bi-clock display-4 text-danger mb-3"></i>
+                    <h4 class="fw-bold">Time Management</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm p-4 border-0" data-aos="flip-left" data-aos-delay="400">
+                    <i class="bi bi-arrows-expand display-4 text-info mb-3"></i>
+                    <h4 class="fw-bold">Adaptability</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5" data-aos="fade-left">
+        <div class="container">
+            <h2 class="text-center">Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="project-container">
+                            <img src="https://img.freepik.com/premium-vector/technology-business-logo-design-vector-template_989676-56.jpg?w=826" class="card-img-top" alt="Project 1">
+                            <div class="project-overlay">
+                                <h5 class="card-title">College Info app</h5>
+                                <p class="card-text">The College Info App, developed using Flutter Flow, is a mobile application that provides detailed information about colleges, including courses, fees, and reviews. It features a responsive user interface for seamless navigation across devices and integrates Firebase for real-time database management, secure data storage, and user authentication. Designed to help students, parents, and educators make informed decisions, the app ensures access to up-to-date information with its real-time updates. This project highlights your skills in mobile app development, database integration, and user-centric design, showcasing your ability to create innovative and impactful solutions efficiently and effectively. </p>
+                            </div>
+                        </div>
+                        <a class="ms-2" href="https://app.flutterflow.io/preview/infoapp-yse6lx?page=GDC1p" target="_blank">College Info app</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="project-container">
+                            <a href="https://dattuportfolio.tiiny.site/"><img id="project1" src="https://www.idfcfirstbank.com/content/dam/idfcfirstbank/images/blog/mobile-banking/how-new-age-banking-is-transforming-the-banking-industry-717x404.jpg" class="card-img-top" alt="Project 2"></a>
+                            <div class="project-overlay">
+                                <h5 class="card-title">Banking Application</h5>
+                                <p class="card-text">The Banking Application, developed using Django, is a robust web-based platform designed to predict and mitigate credit card fraud. The application leverages Django's powerful framework to build a secure and scalable solution, integrating a logistic regression-based machine learning model with an 87% accuracy rate. Advanced techniques such as feature engineering, hyperparameter tuning, and class imbalance handling improve the model's performance by 15%, reducing false positives by 16%. This project showcases your expertise in Django, web development, and machine learning integration, demonstrating your ability to create efficient, secure, and user-friendly solutions for real-world financial challenges.</p>
+                            </div>
+                        </div>
+                        <a class="ms-2" href="https://github.com/Dattu8579/Banking-Project" target="_blank">Banking Application</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="project-container">
+                            <img src="https://i0.wp.com/www.lovelycoding.org/wp-content/uploads/2022/09/Library-Management-System.webp?fit=640%2C427&ssl=1" class="card-img-top" alt="Project 3">
+                            <div class="project-overlay">
+                                <h5 class="card-title">Library Management System</h5>
+                                <p>The Library Management System, developed using Python, is a console-based application designed to manage and organize books in a library. The system allows users to add books, view books, and search books by title or author. It uses object-oriented programming (OOP) principles, with classes for books and the library. The application stores book data in a text file for persistent storage, ensuring information is retained even after the program is closed. This project demonstrates skills in file handling, OOP, and user input validation, showcasing the ability to create a functional and efficient system. The system is user-friendly, providing a simple interface for interacting with the library’s collection.</p>
+                            </div>
+                        </div>
+                        <a class="ms-2" href="https://github.com/Dattu8579/Library_Management_System" target="_blank">Library Management System</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+<section id="contact" class="bg-dark text-white text-center py-5" data-aos="flip-up">
+    <div class="container">
+        <h2 class="mb-4">Contact Me</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" class="w-auto d-flex justify-content-center">
+            <input type="hidden" name="access_key" value="626d068a-247c-4322-ace1-eafefead1cc9">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="uname" class="form-label">Name:</label>
+                    <input type="text" class="form-control" name="uname" id="uname" placeholder="Name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea name="message" id="message" class="form-control" placeholder="Message..." rows="4" required></textarea>
+                </div>
+                <div class="col-12">
+                    <input type="submit" value="Submit" class="btn btn-outline-primary w-75">
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- AOS Library -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,  // Duration of the animation in milliseconds
+        once: true,      // Set to true to animate only once
+        mirror: false    // Disables animation when scrolling back up
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
